@@ -1,0 +1,25 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+    dependencies {
+        classpath 'com.github.honhandsome.plugin:gradle-plugin:1.0.10'
+    }
+}
+apply plugin: 'com.tyjh.deps'
+
+rootProject.name = "Login"
+include ':demo'
+include ':login'

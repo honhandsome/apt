@@ -1,0 +1,20 @@
+plugins {
+    id 'com.tyjh.application'
+}
+
+android {
+    defaultConfig {
+        applicationId "com.amazingchs.login.demo"
+    }
+}
+
+config {
+    kotlin true
+    ARouter true
+}
+
+dependencies {
+    implementation project(':login')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.4.0'
+}

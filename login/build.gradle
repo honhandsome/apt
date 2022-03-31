@@ -1,0 +1,12 @@
+plugins {
+    id 'com.tyjh.library'
+}
+
+config {
+    kotlin true
+    ARouter true
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+}
