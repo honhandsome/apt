@@ -1,6 +1,7 @@
 package com.amazingchs.login;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 
 import androidx.lifecycle.LifecycleOwner;
@@ -19,9 +20,10 @@ import java.util.Map;
 @Route(path = "/login/service")
 public class LoginServiceImpl implements ILoginService {
 
-    private boolean status;
+    private Context mContext;
 
     private final List<WeakReference<LoginListener>> loginListeners = new ArrayList<>();
+    private boolean status;
 
     @Override
     public boolean isLogin() {
@@ -58,7 +60,9 @@ public class LoginServiceImpl implements ILoginService {
 
     @Override
     public void gotoLogin() {
-        // goto login page
+        Intent intent = new Intent(mContext, LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        mContext.startActivity(intent);
     }
 
     @Override
@@ -101,5 +105,6 @@ public class LoginServiceImpl implements ILoginService {
 
     @Override
     public void init(Context context) {
+        mContext = context;
     }
 }

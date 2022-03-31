@@ -10,8 +10,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="48dp"
         android:text="Hello World!"
         android:textSize="14dp"
         tools:ignore="SpUsage" />
+
+    <Button
+        android:id="@+id/btnGotoSexy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="160dp"
+        android:text="Goto sexy"
+        tools:ignore="HardcodedText" />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="48dp"
+        tools:text="Sign in" />
 
 </LinearLayout>
